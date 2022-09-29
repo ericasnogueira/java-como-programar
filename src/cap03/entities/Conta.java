@@ -6,6 +6,16 @@ package cap03.entities;
 public class Conta {
     private String nome;// variável de instância
 
+    //construtor padrão
+    public Conta(){
+        super();
+    }
+
+    //o construtor inicializa nome com o nome do parâmetro
+    public Conta(String nome) { // o nome do construtor é o nome da classe
+        this.nome = nome;
+    }
+
     //método para recuperar o nome do objeto
     public String getNome() {
         return nome;//retorna o valor do nome para o chamador

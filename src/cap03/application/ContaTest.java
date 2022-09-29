@@ -11,7 +11,7 @@ public class ContaTest {
         Scanner entrada = new Scanner(System.in);
 
         //criando um objeto do tipo Conta e atribuindo a minhaConta
-        Conta minhaConta = new Conta();
+        Conta minhaConta = new Conta(); // chamando o construtor padrão
 
         System.out.println(minhaConta.getNome());// exibe o valor inicial do nome (null)
 
