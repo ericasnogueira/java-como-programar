@@ -46,6 +46,13 @@ public class Conta {
         }
     }
 
-
+    public void saque(double saque){
+        if(saque > saldo){
+            System.out.println("Valor do saque excedeu o saldo da conta");
+        } else {
+            saldo = saldo - saque;
+            System.out.println("Saldo disponivel atual : " +saldo);
+        }
+    }
 
 }
