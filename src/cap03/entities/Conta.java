@@ -5,15 +5,23 @@ package cap03.entities;
 
 public class Conta {
     private String nome;// variável de instância
+    private double saldo;// variavel de instância
+
 
     //construtor padrão
     public Conta(){
         super();
     }
 
-    //o construtor inicializa nome com o nome do parâmetro
-    public Conta(String nome) { // o nome do construtor é o nome da classe
+    //o construtor de Conta receber dois parametros
+    public Conta(String nome, double saldo) { // o nome do construtor é o nome da classe
         this.nome = nome;
+
+        //valida que saldo é maior que 0.0; se não for,
+        // a variavel de instância saldo mantém seu valor inicial
+        if(saldo > 0.0){
+            this.saldo = saldo;
+        }
     }
 
     //método para recuperar o nome do objeto
@@ -25,4 +33,19 @@ public class Conta {
     public void setNome(String nome) {
         this.nome = nome; // armazenar o nome
     }
+
+    // metodo retorna o saldo da conta
+    public double getSaldo() {
+        return saldo;
+    }
+
+    // método de deposita apenas uma quantia válida no saldo
+    public void deposita(double depositaDinheiro){
+        if(depositaDinheiro > 0.0){
+            saldo = saldo + depositaDinheiro;
+        }
+    }
+
+
+
 }
