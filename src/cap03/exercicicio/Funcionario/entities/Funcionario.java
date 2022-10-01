@@ -59,7 +59,7 @@ public class Funcionario {
                             "Salario Anual : " + String.format("%.2f", salarioAnual());
                 } else {
                     return  "Nome : " + getPrimerioNome() + " " + getSobrenome() + " \n" +
-                            "Salario mensal : " + String.format("%.2f", salarioMensal);
+                            "Salario mensal : " + String.format("%.2f", aumentarSalario());
                 }
     }
 }
